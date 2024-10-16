@@ -47,5 +47,5 @@ if __name__ == '__main__':
     with open('README.md', 'r') as file:
         mainreadme_lines = file.readlines()
 
-    # with open('docs/index.md', 'w') as file:
-    #     file.writelines(mainreadme_lines)
+    with open('docs/index.md', 'w') as file:
+        file.writelines(mainreadme_lines)
