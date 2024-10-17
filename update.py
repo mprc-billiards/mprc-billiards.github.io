@@ -44,7 +44,7 @@ def generate_md(course: str, filelist_texts: str, readme_path: str):
 
 
 if __name__ == '__main__':
-    with open('README.md', 'r') as file:
+    with open('docs/README.md', 'r') as file:
         mainreadme_lines = file.readlines()
 
     with open('docs/index.md', 'w') as file:
