@@ -2,7 +2,7 @@
 
 丰富课余生活，共享台球乐趣！
 
-![](./img/club.jpg)
+<img src="./img/club.jpg" />
 
 ## 积分榜
 
