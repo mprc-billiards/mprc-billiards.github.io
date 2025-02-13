@@ -14,7 +14,8 @@ game = [
     [1,0], [3,2], [2,0], [3,1], [1,2], [3,0], \
     [3,0], [2,1], [1,2], [3,0], \
     [2,0], [2,0], [3,1], [1,3], [3,1], [1,0], [3,2], [3,2], [3,2], \
-    [3,1], [1,3], [3,1], [3,2], [2,3], [2,3]
+    [3,1], [1,3], [3,1], [3,2], [2,3], [2,3], \
+    [3,1], [3,2], [1,2]
 ]
 
 record = [[0 for _ in range(4)] for _ in range(4)]
@@ -49,5 +50,5 @@ for i in range(4):
 
 print('personal record:')
 for i in range(4):
-    print('player %d: %d-%d %d-%d'%(i, p_record[i][0], p_record[i][1], continue_win[i], continue_lose[i]))
+    print('player %d: %d-%d %d-%d %f'%(i, p_record[i][0], p_record[i][1], continue_win[i], continue_lose[i], p_record[i][0]/(p_record[i][0]+p_record[i][1])))
 # print(len(game))
