@@ -20,7 +20,8 @@ game = [
     [1,0], [1,0], [3,2], [3,2], [2,0], [3,1], [3,1], [1,3], [3,1], \
     [3,2], [1,3], [2,1], [1,3], [3,2], [2,1],\
     [0,3], [3,0], [3,0] ,[2,1], [1,2], [1,2], [2,0], [3,1], [1,3], [1,3], [3,1], [1,3],\
-    [0,1], [1,0], [0,1], [2,3], [3,2], [2,3], [1,3], [2,0], [2,0], [2,0]
+    [0,1], [1,0], [0,1], [2,3], [3,2], [2,3], [1,3], [2,0], [2,0], [2,0],\
+    [3,1], [2,3], [2,1]
 ]
 
 record = [[0 for _ in range(4)] for _ in range(4)]
@@ -53,7 +54,23 @@ for i in range(4):
         p_record[i][0] += record[i][j]
         p_record[j][1] += record[i][j]
 
+win_rate = [0 for _ in range(4)]
+max_win_rate = 0
+max_record = [0 for _ in range(2)]
+for i in range(4):
+    win_rate[i] = p_record[i][0]/(p_record[i][0]+p_record[i][1])
+    if win_rate[i] > max_win_rate:
+        max_record = p_record[i]
+        max_win_rate = win_rate[i]
+
+win_deviation = [0 for _ in range(4)]
+for i in range(4):
+    win_deviation[i] = ((max_record[0]-max_record[1])-(p_record[i][0]-p_record[i][1]))/2
+
 print('personal record:')
 for i in range(4):
-    print('player %d: %d-%d %d-%d %f'%(i, p_record[i][0], p_record[i][1], continue_win[i], continue_lose[i], p_record[i][0]/(p_record[i][0]+p_record[i][1])))
+    print('player %d: %d %d-%d %d-%d %.2f %.1f'%(i, (p_record[i][0]+p_record[i][1]),\
+                                                 p_record[i][0], p_record[i][1],\
+                                                 continue_win[i], continue_lose[i],\
+                                                 win_rate[i], win_deviation[i]))
 # print(len(game))
