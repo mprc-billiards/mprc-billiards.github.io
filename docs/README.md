@@ -16,4 +16,6 @@
 
 ![](./img/club_6.jpg)
 
-成立时间：2024年10月16日
+成立时间：2024年10月15日
+
+自2025年9月2日起，“MPRC台球俱乐部”变更为“新MPRC台球俱乐部”。[Link](https://new-mprc-billiards.github.io)
