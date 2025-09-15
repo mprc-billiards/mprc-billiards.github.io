@@ -1,4 +1,5 @@
 site
+.vscode/
 img_backup/
 *.docx
 *.vsdx
